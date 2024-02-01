@@ -1,0 +1,13 @@
+
+//variabler färg
+$primaryBackground: #f8f4f7;
+$primaryColor: #e79add;
+$darkerColor: darken($primaryColor, 40%);
+$lighterColor: lighten($primaryColor, 10%);
+
+//mixins
+@mixin flexCenter() {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

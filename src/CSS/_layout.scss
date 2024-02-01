@@ -1,0 +1,44 @@
+@use "base";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background: base.$primaryBackground;
+    
+}
+
+header {
+    width: 100%;
+    height: 30vh;
+    background-color: base.$primaryColor;
+}
+
+nav {
+    width: 100%;
+    background-color: base.$lighterColor;
+    height: 50px;
+
+    ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        color: base.$darkerColor;
+        font-size: 1.4em;
+        font-weight: bolder;
+        text-transform: uppercase;
+        
+        &:hover {
+            color: base.$primaryColor;
+            cursor: pointer;
+            text-shadow: 0 0 10px white;
+        }  
+    }
+}
