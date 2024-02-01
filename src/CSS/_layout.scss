@@ -1,11 +1,14 @@
 @use "base";
 
+
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    font-family: 'Raleway', sans-serif;
     width: 100%;
     background: base.$primaryBackground;
     
@@ -27,18 +30,50 @@ nav {
         list-style: none;
         display: flex;
         justify-content: space-around;
+        padding-top: 10px;
     }
 
-    li {
+    a {
         color: base.$darkerColor;
         font-size: 1.4em;
         font-weight: bolder;
         text-transform: uppercase;
+        text-decoration: none;
+       
         
         &:hover {
             color: base.$primaryColor;
-            cursor: pointer;
-            text-shadow: 0 0 10px white;
+            cursor: pointer;           
         }  
+    }
+}
+
+.activated {
+    text-decoration: underline;
+}
+
+#main_index {
+    h1, h2{
+    @include base.flexCenter();
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: base.$darkerColor;
+    }
+
+    section {
+       max-width: 1000px;
+       margin: auto;
+
+        img  {
+            max-width: 100%;
+            width: 700px;
+            display: block;
+            margin: auto;
+            border-radius: base.$roundedCornersPics;
+        }
+
+        h2 {
+            max-width: 100%;
+        }
     }
 }
