@@ -1,36 +1,29 @@
-
-
-
 //variabler
 $roundedCornersPics: 50%;
 
-//variabler färg
+//variabler färg light-mode
 $primaryBackground: #f8f4f7;
 $primaryColor: #DFD3C3;
 $darkerColor: darken($primaryColor, 40%);
 $lighterColor: lighten($primaryColor, 10%);
 
-$pinkColor:#e79add;
-
-
-
 
 //färgscema för dark-mode
-@media (prefers-color-scheme:dark){
-    $primaryBackground: #2e0b25;
-    $primaryColor: #DFD3C3;
-    $darkerColor: darken($primaryColor, 40%);
-    $lighterColor: lighten($primaryColor, 10%);
+$primaryBackgroundDark: darken($primaryColor, 60%);
+$headerDark: darken($primaryColor, 40%);
+
+
+
+body {
+    font-family: 'Raleway', sans-serif;
 }
 
 
-//mixins
+
+//mixinsDFD3C3
 @mixin flexCenter() {
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
-picture{
-    border-radius: $roundedCornersPics;
-}

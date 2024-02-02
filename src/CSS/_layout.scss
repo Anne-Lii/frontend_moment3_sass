@@ -1,23 +1,33 @@
 @use "base";
 
-
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
     width: 100%;
     background: base.$primaryBackground;
-
 }
 
 header {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     background-color: base.$primaryColor;
+
+    img {
+        width: 400px;
+        max-width: 50%;
+    }
+}
+
+@media (prefers-color-scheme:dark){
+    body {
+        background-color: base.$primaryBackgroundDark;
+    }
+    header {
+        background-color: base.$headerDark;
+    }
 }
 
 //dölj dropdownmenyn på större skärmar än 800 pixlar
@@ -86,6 +96,16 @@ header {
     }
 }
 
+#main_sass {
+    
+    @extend #main_index;
+
+    p {
+      @extend h2;
+    }
+    
+}
+
 
 //annan navigeringsmeny för mindre skärmar
 @media screen and (max-width: 800px) {
@@ -97,6 +117,10 @@ header {
 
     header {
         height: 150px;
+
+        img{
+            width: 300px;
+        }
     }
 
     //dropdown meny
@@ -108,7 +132,7 @@ header {
         position: absolute;
         top: 0;
         right: 0;
-        display: block; // denna togglas mellan block och none för att visa och gömma menyn
+        display: none; // denna togglas mellan block och none för att visa och gömma menyn
         z-index: 10;
 
         ul {
