@@ -1,10 +1,5 @@
 @use "base";
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     width: 100%;
     background: base.$primaryBackground;
@@ -12,19 +7,16 @@ body {
 
 header {
     width: 100%;
-    height:100px;
+    height: 100px;
     background-color: base.$primaryColor;
-
-    img {
-        width: 400px;
-        max-width: 50%;
-    }
 }
 
-@media (prefers-color-scheme:dark){
+//annat färgschema för mörkt tema
+@media (prefers-color-scheme:dark) {
     body {
         background-color: base.$primaryBackgroundDark;
     }
+
     header {
         background-color: base.$headerDark;
     }
@@ -36,7 +28,9 @@ header {
     display: none;
 }
 
+//navigeringen för större skärmar än 800 pixlar
 #nav-bigscreen {
+
     width: 100%;
     background-color: base.$lighterColor;
     height: 50px;
@@ -56,7 +50,6 @@ header {
         text-transform: uppercase;
         text-decoration: none;
 
-
         &:hover {
             color: base.$primaryColor;
             cursor: pointer;
@@ -73,14 +66,15 @@ header {
     h1,
     h2 {
         @include base.flexCenter();
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 55px;
         color: base.$darkerColor;
+        max-width: 100%;
     }
 
     section {
         max-width: 1000px;
         margin: auto;
+        padding: 100px 0;
 
         img {
             max-width: 90%;
@@ -90,25 +84,28 @@ header {
             box-shadow: 0 0 50px;
             border-radius: base.$roundedCornersPics;
         }
-
-        h2 {
-            max-width: 100%;
-        }
     }
 }
 
 #main_sass {
-    
+
     @extend #main_index;
+
+    h1 {
+        padding-top: 70px;
+    }
+
     section {
-        max-width: 800px
+        width: 800px;
+        max-width: 80%;
+        padding-top: 0
     }
 
     p {
-      @extend h2;
-    
+        @extend h2;
     }
-    
+
+
 }
 
 
@@ -123,7 +120,7 @@ header {
     header {
         height: 150px;
 
-        img{
+        img {
             width: 300px;
         }
     }
@@ -229,6 +226,4 @@ header {
             padding: 2%;
         }
     }
-
-
 }
