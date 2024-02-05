@@ -35,20 +35,7 @@ p {
     font-weight: 400;
 }
 
-@if (prefers-color-scheme: dark) {
-    h1 {
-        font-size: 30px;
-    }
 
-    p {
-        font-size: 1.6em;
-        font-weight: bold;
-    }
-
-    img {
-        padding: 10px;
-    }
-}
 
 //mixin för att centrera
 @mixin flexCenter() {
