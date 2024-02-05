@@ -1,27 +1,5 @@
 @use "base";
 
-//annat färgschema för mörkt tema
-@media (prefers-color-scheme:dark) {
-    body {
-        background-color: base.$primaryBackgroundDark;
-    }
-    header {
-        background-color: base.$headerDark;
-    }
-
-    @if (prefers-color-scheme:dark) {
-        h1 {
-            font-size: 30px;
-        }
-        p {
-            font-size: 1.6em;
-            font-weight: bold;
-        }
-        img {
-            padding: 10px;
-        }
-    }
-}
 
 body {
     width: 100%;
@@ -33,9 +11,11 @@ header {
     height: 150px;
     background-color: base.$primaryColor;
     img {
-        width: 230px;
-        position: relative;
-        top: 300px;
+        width: 250px;
+        max-width: 60%;
+       position: relative;
+       top: 10px;
+       left: 20px;
         
     }
 }
@@ -122,6 +102,31 @@ header {
 }
 
 
+//annat färgschema för mörkt tema
+@media (prefers-color-scheme:dark) {
+    body {
+        background-color: base.$primaryBackgroundDark;
+    }
+    header {
+        background-color: base.$headerDark;
+    }
+
+    @if (prefers-color-scheme:dark) {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 1.6em;
+            font-weight: bold;
+        }
+        section {
+            img {
+                padding: 10px;
+            }
+        }
+    }
+}
+
 //annan navigeringsmeny för mindre skärmar
 @media screen and (max-width: 800px) {
 
@@ -134,7 +139,8 @@ header {
         height: 150px;
 
         img {
-            width: 300px;
+            width: 250px;
+            max-width: 50%;
         }
     }
 
